@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+<title>{% block title %} Ro'yhatdan o'tish{% endblock title %}</title>
+
+{% block content %}
+    <h2>Ro'yhatdan o'tish</h2>
+    <form method="post">{% csrf_token %}
+        {{ form|crispy }}
+
+        <button type="submit" class="btn btn-primary">Yuborish</button>
+    </form>
+{% endblock content%}>
